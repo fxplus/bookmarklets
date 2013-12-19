@@ -1,0 +1,33 @@
+/* @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic); */
+/* <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'> */
+
+body {
+  font-family: Lato, sans;
+  padding: 30px 20% 20% 50px;
+  line-height: 2em;
+  color: #444;
+}
+a {
+  text-decoration: none;
+  color: #428bca;
+}
+
+h1,h2,h3,h4,h5 {
+  margin-bottom: 1.2em;
+  color: #777;
+}
+
+em {
+  font: Lato;
+  font-weight: 400;
+  color: #777;
+}
+
+article {
+  margin-bottom: 3em;
+}
+
+footer {
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
