@@ -25,6 +25,10 @@ switch(site)
     selector = '#firstHeading';
     media = ''; // video
     break;
+  case 'www.flixster.com':
+    selector = 'div.bd h1.title span.bold[itemprop=name]'; // shakey - poor semantics, relies on bold
+    media = 'medium=v'; // video
+    break;
 }
 
 if (selector) {
@@ -42,7 +46,18 @@ function validate_title(title) {
 }
 
 function goto_catalogue(title, media) {
-  title = validate_title(title);
-  query = "http://voyager.falmouth.ac.uk/vwebv/search?searchArg1="+title+"&argType1=phrase&searchCode1=TKEY&combine2=and&searchArg2=&argType2=any&searchCode2=GKEY&combine3=and&searchArg3=&argType3=any&searchCode3=GKEY&year=2012-2013&fromYear=&toYear=&"+media+"&recCount=10&searchType=2&page.search.search.button=Search";
-  window.location.href = query;
+  var searchargument = 'title';
+  switch (searchargument) {
+  case 'title':
+    title = validate_title(title);
+    query = "http://voyager.falmouth.ac.uk/vwebv/search?searchArg1="+title+"&argType1=phrase&searchCode1=TKEY&combine2=and&searchArg2=&argType2=any&searchCode2=GKEY&combine3=and&searchArg3=&argType3=any&searchCode3=GKEY&year=2012-2013&fromYear=&toYear=&"+media+"&recCount=10&searchType=2&page.search.search.button=Search";
+    window.location.href = query;
+    break;
+  case 'keyword':
+    title = validate_title(title);
+    query = "http://voyager.falmouth.ac.uk/vwebv/search?searchArg1="+title+"&argType1=phrase&searchCode1=GKEY&combine2=and&searchArg2=&argType2=any&searchCode2=GKEY&combine3=and&searchArg3=&argType3=any&searchCode3=GKEY&year=2012-2013&fromYear=&toYear=&"+media+"&recCount=10&searchType=2&page.search.search.button=Search";
+    window.location.href = query;
+    break;
+  }
+
 }
