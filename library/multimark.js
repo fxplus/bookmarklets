@@ -17,6 +17,14 @@ switch(site)
     selector = '#overview-top h1.header span.itemprop';
     media = 'medium=v'; // video
     break;
+  case 'www.suggestmemovie.com':
+    selector = '.left-content .contentbox h1';
+    media = 'medium=v'; // video
+    break;
+  case 'en.wikipedia.org':
+    selector = '#firstHeading';
+    media = ''; // video
+    break;
 }
 
 if (selector) {
