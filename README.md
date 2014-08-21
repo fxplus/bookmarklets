@@ -8,9 +8,14 @@ If you have git installed:
 
     git clone git@github.com:fxplus/bookmarklets.git
 
-Bookmarklets included so far
+Sites supported so far:
 
-* imdb: film to library catalogue
-* goodreads: book to library catalogue
+* imdb
+* goodreads
+* rottentomatoes
+* suggestmemovie
+* wikipedia.org
+* flixster.com
 
 *The unminified, commented source of each bookmarklet is also here in case you would like to make a variation*
+
